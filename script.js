@@ -12,6 +12,7 @@ users1.map(user => {
     return arrayUser1.push(`${name}: ${age}`);
 });
 
+
 // Фильтрация массива чисел: Дан массив чисел. Используйте filter, чтобы получить массив, содержащий только четные числа.
 const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const evenNumbers1 = numbers1.filter(num => num % 2 === 0);
@@ -53,7 +54,7 @@ const numbers = [1, 4, 6, 8, 10];
 const processedNumbers = (numbers) => {
     return numbers
         .map(num => num = num * 2)
-        .filter(num => num > 10)
+        .filter(num => num < 10)
 };
 
 // Сортировка объектов по критерию: Используйте filter или find, чтобы отфильтровать массив объектов по определенному критерию, например,
@@ -96,7 +97,8 @@ const allEven = numbers3.every(number => number % 2 === 0);
 
 // Создание массива уникальных значений: Используйте map и filter, чтобы создать массив уникальных значений из массива с дубликатами.
 const numbers4 = [1, 2, 3, 4, 5, 1, 2, 6, 7, 8, 5];
-
+const numbers4New = numbers4.filter((num,index,arr)=> {} )
+console.log (numbers4New);
 // // Фильтрация массива по длине строк: Дан массив строк. Используйте filter, чтобы получить только те строки, длина которых больше 5 символов.
 const strings = ["Hello", "World", "JavaScript", "CSS", "HTML"];
 const stringsFive = strings.filter(str => str.length > 5);
@@ -114,5 +116,6 @@ const users3 = [
 const selectedUsers = users3
     .filter(user => user.age > 25)
     .map(user => user.name.toUpperCase())
-    .find((user) => user.length > 4);
+    .every((user) => user.length > 4);
 console.log(`Все выбранные пользователи имеют имена длиннее 4 символов: ${selectedUsers}`);
+
