@@ -76,11 +76,15 @@ const sales = [
 ];
 let allQuantity = 0;
 sales.forEach(sale => {
-    allQuantity = allQuantity + sale.quantity
+    allQuantity += sale.quantity
 });
+console.log(allQuantity)
 // Удаление дубликатов из массива: Используйте filter и findIndex, чтобы удалить дубликаты из массива строк.
 const strings2 = ["JavaScript", "Python", "JavaScript", "Java", "Python", "Java", "C++"];
-
+const srtNew = strings2.filter((str, index) =>
+    index === strings2.findIndex((elem) => elem === str)
+)
+console.log(srtNew)
 // Проверка наличия элементов по условию: Используйте some и every, чтобы проверить, содержит ли массив чисел хотя бы одно отрицательное
 // значение и все ли значения четные. (Почитайте про метод some)
 const numbers3 = [2, 4, -1, 6, 8];
