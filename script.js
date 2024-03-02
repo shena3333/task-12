@@ -97,7 +97,7 @@ const allEven = numbers3.every(number => number % 2 === 0);
 
 // Создание массива уникальных значений: Используйте map и filter, чтобы создать массив уникальных значений из массива с дубликатами.
 const numbers4 = [1, 2, 3, 4, 5, 1, 2, 6, 7, 8, 5];
-const numbers4New = numbers4.filter((num,index,arr)=> {} )
+const numbers4New = numbers4.filter((num,index,arr)=> index==arr.indexOf(num))
 console.log (numbers4New);
 // // Фильтрация массива по длине строк: Дан массив строк. Используйте filter, чтобы получить только те строки, длина которых больше 5 символов.
 const strings = ["Hello", "World", "JavaScript", "CSS", "HTML"];
